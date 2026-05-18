@@ -5,7 +5,7 @@ const heroSlides = [
 ];
 
 const services = [
-    { img: "images/gas/oilgas.jpeg", title: "FLUIDOS, GAS Y VAPOR", text: "Especialistas en alta presión.", pdf: "pdf/docs/catalogo_fabricacion.pdf" },
+    { img: "images/gas/oilgas.jpeg", title: "FLUIDOS, GAS Y VAPOR", text: "Especialistas en alta presión.", pdf: "pdf/docs/Catalogo.pdf" },
     { img: "images/fabri.jpeg", title: "FABRICACIONES", text: "Suministros según normas vigentes.", pdf: "pdf/docs/catalogo_fabricacion.pdf" },
     { img: "images/productos/9.jpeg", title: "PRODUCTOS", text: "Entregas extremadamente verificadas.", pdf: "pdf/docs/catalogo_fabricacion.pdf" }
 ];
@@ -25,10 +25,8 @@ const clients = [
 ];
 
 
-// Inicializar AOS
 AOS.init({ duration: 800, once: true });
 
-// 1. Hero Slider
 function renderHero() {
     const swiperWrapper = document.getElementById('dynamicSlides');
     if (!swiperWrapper) return;
@@ -56,7 +54,6 @@ function renderHero() {
     });
 }
 
-// 2. Servicios - MODIFICADO: ahora usa onclick con verPDF
 function renderServices() {
     const container = document.getElementById('servicesContainer');
     if(container) {
@@ -75,7 +72,6 @@ function renderServices() {
     }
 }
 
-// 3. Galería dinámica con filtros
 function renderGallery(filter = 'all') {
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
@@ -93,7 +89,6 @@ function renderGallery(filter = 'all') {
     `).join('');
 }
 
-// 4. Clientes
 function renderClients() {
     const row = document.getElementById('clientsRow');
     if(row) {
@@ -145,7 +140,6 @@ function initFilters() {
     });
 }
 
-// Sticky Navbar effect
 window.addEventListener('scroll', function() {
     const nav = document.getElementById('mainNav');
     if (window.scrollY > 100) nav.classList.add('scrolled');
