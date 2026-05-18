@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricación | Tuberías y Conexiones Oil & Gas</title>
+<meta name="description" content="Fabricación de tuberías, conexiones y suministros industriales bajo las más altas normas de calidad. Conozca nuestros procesos y galería de proyectos.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/fabricacion.css">
+
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <i class="fas fa-envelope me-2"></i> contacto@tubosoilygas.com
+                <span class="mx-2">|</span>
+                <i class="fas fa-clock me-2"></i> Lun - Vie: 8:00 AM - 5:30 PM
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="https://www.facebook.com/share/1DvQATFmLW/" target="_blank" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@Tubosoilygas" target="_blank" class="me-3"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/cotizaciones.tva1?igsh=MWwxanNvaTB2OXYyag==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-main" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/favicon.png" alt="Logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">NOSOTROS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="nosotros.html">Quiénes Somos</a></li>
+                        <li><a class="dropdown-item" href="aviso.html">Aviso de Privacidad</a></li>
+                        <li><a class="dropdown-item" href="clientes.html">Clientes</a></li>
+                        <li><a class="dropdown-item" href="normativas.html">Normativas</a></li>
+                        <li><a class="dropdown-item" href="galeria_fabricaciones.html">Galeria de Fabricaciones</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link active" href="fabricacion.html">FABRICACIÓN</a></li>
+                <li class="nav-item"><a class="nav-link" href="productos.html">PRODUCTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <a href="contacto.html" class="btn btn-primary-custom ms-lg-3">COTIZAR</a>
+                <img src="images/logo.png" alt="Logo Secundario" class="secondary-logo ms-3">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="page-header fabricacion-header">
+    <div class="container text-center">
+        <h1 data-aos="fade-up">Fabricación Especializada</h1>
+        <p class="lead text-white mt-3" data-aos="fade-up" data-aos-delay="100">Calidad, precisión y cumplimiento en cada pieza que fabricamos</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Fabricación</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="process-section py-5">
+    <div class="container">
+        <div class="section-title">
+            <span class="subtitle">Nuestro Proceso</span>
+            <h2>Así lo hacemos</h2>
+            <p>Control de calidad en cada etapa, desde la materia prima hasta la entrega final</p>
+        </div>
+        <div class="row" id="processContainer">
+        </div>
+    </div>
+</section>
+
+<section class="pdf-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4" data-aos="fade-right">
+                <span class="badge bg-primary mb-3">Documentación Técnica</span>
+                <h2>Catálogo de Fabricación</h2>
+                <p>Consulta nuestro catálogo completo con especificaciones técnicas, medidas, materiales y certificaciones. Haz clic en el botón para visualizarlo sin necesidad de descargar.</p>
+                <button class="btn btn-primary-custom" id="openPdfBtn">
+                    <i class="fas fa-file-pdf me-2"></i> Ver Catálogo PDF
+                </button>
+                <div class="mt-4">
+                    <p><i class="fas fa-check-circle text-primary me-2"></i> Tubería sin costura</p>
+                    <p><i class="fas fa-check-circle text-primary me-2"></i> Conexiones forjadas</p>
+                    <p><i class="fas fa-check-circle text-primary me-2"></i> Válvulas de alta presión</p>
+                    <p><i class="fas fa-check-circle text-primary me-2"></i> Suministros especiales</p>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="pdf-preview-card text-center p-4 bg-white rounded-4 shadow">
+                    <i class="fas fa-file-pdf fa-5x text-danger mb-3"></i>
+                    <h4>Catálogo 2026</h4>
+                    <p>Especificaciones completas de todos nuestros productos fabricados bajo norma.</p>
+                    <button class="btn btn-outline-custom" id="openPdfBtn2">
+                        <i class="fas fa-eye me-2"></i> Vista Previa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-fabricacion py-5">
+    <div class="container">
+        <div class="section-title">
+            <span class="subtitle">Nuestros Trabajos</span>
+            <h2>Galería de Fabricaciones</h2>
+            <p>Proyectos recientes y piezas fabricadas con los más altos estándares de calidad</p>
+        </div>
+        <div class="row" id="galleryFabricacion"></div>
+    </div>
+</section>
+<div class="modal fade" id="equiposModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><i class="fas fa-microchip me-2"></i> Nuestra Maquinaria y Capacidades</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="equipo-card">
+                            <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                            <h4>Maquinaria</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Tornos de precisión</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Fresadora universal</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Equipo de corte industrial</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Cepillo metalmecánico</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Máquina de roscar tubería</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="equipo-card">
+                            <i class="fas fa-fire fa-3x text-primary mb-3"></i>
+                            <h4>Procesos de Soldadura</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> <strong>SMAW</strong> - Soldadura por arco metálico protegido</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> <strong>MIG/MAG</strong> - Soldadura con gas inerte/activo</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> <strong>TIG</strong> - Soldadura con tungsteno y gas inerte</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Oxicorte</strong> - Corte por oxiacetileno</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="alert alert-info">
+                            <i class="fas fa-trophy me-2"></i>
+                            <strong>Capacidades del Taller:</strong> Maquinado de Bujes de Bronce, Piñones, Cuñeros, Roscado y Corte de Tubería C10 y C40, Fabricación de Anclas de Cimentación, Rectificado de Bridas (Inox 304, Slip-on, API 6A)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><i class="fas fa-file-pdf me-2"></i> Catálogo de Fabricación</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0" style="height: 80vh;">
+                <iframe id="pdfViewer" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid rounded" style="max-height: 80vh;">
+                <button type="button" class="btn btn-light mt-3" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h5>Quiénes Somos</h5>
+                <p>Suministro de productos de acero de la más alta calidad para la industria petrolera, petroquímica y energética.</p>
+                <div class="social-links mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="fabricacion.html">Fabricación</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <h5>Oficinas</h5>
+                <p>Periférico Carlos Pellicer Cámara No. 619, Col. Miguel Hidalgo, Villahermosa, Tabasco.</p>
+                <p><i class="fas fa-phone-alt me-2"></i> (993) 635 7956</p>
+                <p><i class="fab fa-whatsapp me-2"></i> +52 1 993 395 9392</p>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <h5>Horario</h5>
+                <p>Lunes a Viernes: 8:00 AM - 5:30 PM</p>
+                <p>Sábados : 8:00 AM - 2:00 PM</p>
+                <p>Domingos : Cerrado</p>
+            </div>
+        </div>
+        <hr class="bg-secondary">
+        <div class="text-center pt-3">
+            <p class="mb-0">© 2026 Tuberías y Conexiones Oil & Gas S.A. de C.V. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://api.whatsapp.com/send?phone=5219932325906" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/fabricacion.js"></script>
+</body>
+</html>

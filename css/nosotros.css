@@ -1,0 +1,190 @@
+.page-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+    padding: 80px 0;
+    position: relative;
+    margin-top: 0;
+}
+.page-header h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.breadcrumb {
+    background: transparent;
+}
+.breadcrumb-item a, .breadcrumb-item.active {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: var(--primary);
+}
+
+.value-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+}
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,82,3,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.value-icon i {
+    font-size: 40px;
+    color: var(--primary);
+}
+.value-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    margin-bottom: 30px;
+}
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+.team-img {
+    height: 280px;
+    overflow: hidden;
+}
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.team-card:hover .team-img img {
+    transform: scale(1.05);
+}
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+.team-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+.team-info p {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.client-logos-inner {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+.gallery-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.gallery-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+.gallery-overlay i {
+    font-size: 40px;
+    color: white;
+}
+
+.normativa-item {
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    background: #f8f9fa;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.normativa-item:hover {
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(5px);
+}
+.normativa-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.secondary-logo {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.secondary-logo-link {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.secondary-logo-link:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .secondary-logo {
+        margin-left: 0 !important;
+        margin-top: 15px;
+        height: 45px;
+    }
+    
+    .navbar-collapse .d-flex .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

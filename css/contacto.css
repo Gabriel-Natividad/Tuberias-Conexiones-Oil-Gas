@@ -1,0 +1,252 @@
+.contacto-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+    padding: 80px 0;
+    position: relative;
+}
+.contacto-header h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.contacto-header .lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+.info-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255,82,3,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.info-icon i {
+    font-size: 32px;
+    color: var(--primary);
+}
+.info-card h4 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+.info-card p {
+    color: var(--gray);
+    margin-bottom: 5px;
+}
+.info-card a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.info-card a:hover {
+    text-decoration: underline;
+}
+
+/* Formulario */
+.form-wrapper {
+    transition: var(--transition);
+}
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px 15px;
+    transition: var(--transition);
+}
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255,82,3,0.1);
+}
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.map-wrapper {
+    overflow: hidden;
+}
+#map {
+    z-index: 1;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+    margin-right: 12px;
+    margin-bottom: 10px;
+}
+.btn-social.facebook {
+    background: #1877f2;
+    color: white;
+}
+.btn-social.youtube {
+    background: #ff0000;
+    color: white;
+}
+.btn-social.instagram {
+    background: linear-gradient(45deg, #f09433, #d62976);
+    color: white;
+}
+.btn-social:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    color: white;
+}
+
+.whatsapp-card {
+    transition: var(--transition);
+}
+.whatsapp-card:hover {
+    transform: scale(1.02);
+}
+
+.horario-card {
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.horario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.horario-card .d-flex {
+    transition: all 0.2s ease;
+    padding: 12px 0;
+}
+
+.horario-card .d-flex:hover {
+    background-color: rgba(255, 82, 3, 0.05);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.horario-card i {
+    color: #ff5203;
+    font-size: 1.2rem;
+}
+
+.horario-card .fw-bold {
+    color: #2c3e4e;
+    font-weight: 600;
+}
+
+.horario-section h2 {
+    color: #2c3e4e;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.horario-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff5203, #ff8533);
+    border-radius: 3px;
+}
+
+.horario-section h4 {
+    color: #2c3e4e;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .contacto-header h1 {
+        font-size: 2rem;
+    }
+    .info-card {
+        padding: 25px 20px;
+    }
+    .btn-social {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+.secondary-logo {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.secondary-logo-link {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.secondary-logo-link:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .secondary-logo {
+        margin-left: 0 !important;
+        margin-top: 15px;
+        height: 45px;
+    }
+    
+    .navbar-collapse .d-flex .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (min-width: 1200px) {
+    .contact-info-cards .row .col-lg-4 {
+        width: 25%;
+    }
+}
+
+.info-card {
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .contact-info-cards .row .col-md-6 {
+        width: 50%; 
+    }
+}
+
+
+@media (max-width: 767px) {
+    .contact-info-cards .row [class*="col-"] {
+        width: 100%; 
+    }
+}
