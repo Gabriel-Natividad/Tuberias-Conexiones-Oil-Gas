@@ -1,4 +1,4 @@
-const NUMERO_WHATSAPP = "5219933959392";  // Formato: 52 (México) + 1 + 9933959392
+const NUMERO_WHATSAPP = "5219933959392";  
 
 function enviarWhatsApp(event) {
     event.preventDefault();

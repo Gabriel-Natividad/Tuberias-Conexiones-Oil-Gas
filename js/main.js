@@ -5,9 +5,9 @@ const heroSlides = [
 ];
 
 const services = [
-    { img: "images/gas/oilgas.jpeg", title: "FLUIDOS, GAS Y VAPOR", text: "Especialistas en alta presión.", pdf: "pdf/docs/Catalogo.pdf" },
+    { img: "images/gas/oilgas.jpeg", title: "FLUIDOS, GAS Y VAPOR", text: "Especialistas en alta presión.", pdf: "pdf/docs/catalago.pdf" },
     { img: "images/fabri.jpeg", title: "FABRICACIONES", text: "Suministros según normas vigentes.", pdf: "pdf/docs/catalogo_fabricacion.pdf" },
-    { img: "images/productos/9.jpeg", title: "PRODUCTOS", text: "Entregas extremadamente verificadas.", pdf: "pdf/docs/catalogo_fabricacion.pdf" }
+    { img: "images/productos/9.jpeg", title: "PRODUCTOS", text: "Entregas extremadamente verificadas.", pdf: "pdf/docs/catalogo_producto.pdf" }
 ];
 
 const galleryImages = [
