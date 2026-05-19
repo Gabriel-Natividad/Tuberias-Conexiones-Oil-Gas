@@ -2,17 +2,22 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Aviso de Privacidad | Oil & Gas</title>
+<title>Servicios de Fabricación | Tuberías y Conexiones Oil & Gas</title>
+<meta name="description" content="Conozca todos nuestros servicios de fabricación especializada: maquinado, soldadura, crossover, ranurado, anclas, mantenimiento y más.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/nosotros.css">
-<link rel="shortcut icon" href="images/logo.png">
+<link rel="stylesheet" href="css/fabricacion.css">
+
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div class="container">
         <div class="row align-items-center">
@@ -22,18 +27,19 @@
                 <i class="fas fa-clock me-2"></i> Lun - Vie: 8:00 AM - 5:30 PM
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <a href="https://www.facebook.com/share/1DvQATFmLW/" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.youtube.com/@Tubosoilygas" class="me-3"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/cotizaciones.tva1?igsh=MWwxanNvaTB2OXYyag=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1DvQATFmLW/" target="_blank" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@Tubosoilygas" target="_blank" class="me-3"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/cotizaciones.tva1?igsh=MWwxanNvaTB2OXYyag==" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
 </div>
 
+<!-- NAVBAR PRINCIPAL -->
 <nav class="navbar navbar-expand-lg navbar-main" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="images/favicon.png" alt="Oil&Gas Logo" class="logo-img" id="siteLogo">
+            <img src="images/favicon.png" alt="Logo" class="logo-img">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -41,8 +47,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
-                
-                <!-- MENÚ NOSOTROS CON DROPDOWN -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">NOSOTROS</a>
                     <ul class="dropdown-menu">
@@ -52,82 +56,62 @@
                         <li><a class="dropdown-item" href="normativas.html">Normativas</a></li>
                     </ul>
                 </li>
-                
-                <!-- MENÚ FABRICACIÓN CON DROPDOWN (NUEVO) -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">FABRICACIÓN</a>
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">FABRICACIÓN</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="fabricacion-servicios.html">Servicios</a></li>
                         <li><a class="dropdown-item" href="fabricacion-catalogo.html">Catálogo PDF</a></li>
                         <li><a class="dropdown-item" href="fabricacion-galeria.html">Galería</a></li>
                     </ul>
                 </li>
-                
                 <li class="nav-item"><a class="nav-link" href="productos.html">PRODUCTOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
             </ul>
-            <div class="d-flex align-items-center">
-                <a href="contacto.html" class="btn btn-primary-custom ms-lg-3 mt-3 mt-lg-0">COTIZAR</a>
-                <img src="images/logo.png" alt="Logo Secundario" class="secondary-logo ms-3">
-            </div>
+            <a href="contacto.html" class="btn btn-primary-custom ms-lg-3">COTIZAR</a>
+            <img src="images/logo.png" alt="Logo Secundario" class="secondary-logo ms-3">
         </div>
     </div>
 </nav>
 
-<section class="page-header">
+<!-- PAGE HEADER -->
+<section class="page-header servicios-header">
     <div class="container text-center">
-        <h1 data-aos="fade-up">Aviso de Privacidad</h1>
+        <h1 data-aos="fade-up">Servicios de Fabricación</h1>
+        <p class="lead text-white mt-3" data-aos="fade-up" data-aos-delay="100">Conozca todos los servicios especializados que ofrecemos</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center">
                 <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Aviso de Privacidad</li>
+                <li class="breadcrumb-item active" aria-current="page">Servicios</li>
             </ol>
         </nav>
     </div>
 </section>
-
-<section class="privacy-content py-5">
+<!-- SERVICIOS EN GRID -->
+<section class="servicios-grid-section py-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10" data-aos="fade-up">
-                <div class="card border-0 shadow-lg p-4 p-lg-5">
-                    <h3>Responsable de tus datos</h3>
-                    <p>Tuberías y Conexiones Oil & Gas S.A. de C.V., con domicilio en Periférico Carlos Pellicer Cámara No. 619, Col. Miguel Hidalgo, Villahermosa, Tabasco, es el responsable del tratamiento de sus datos personales.</p>
-                    
-                    <h3 class="mt-4">Finalidades del tratamiento</h3>
-                    <p>Los datos personales que recabamos serán utilizados para las siguientes finalidades:</p>
-                    <ul>
-                        <li>Proveer los productos y servicios solicitados.</li>
-                        <li>Enviar cotizaciones y responder preguntas.</li>
-                        <li>Informar sobre cambios o nuevos productos.</li>
-                        <li>Evaluar la calidad del servicio.</li>
-                    </ul>
-                    
-                    <h3 class="mt-4">Datos personales recabados</h3>
-                    <p>Podemos recabar: nombre, dirección, correo electrónico, teléfono, información fiscal y datos de contacto.</p>
-                    
-                    <h3 class="mt-4">Transferencia de datos</h3>
-                    <p>Sus datos no serán compartidos con terceros ajenos a la relación comercial, salvo obligación legal.</p>
-                    
-                    <h3 class="mt-4">ARCO</h3>
-                    <p>Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de sus datos personales. Para ejercer estos derechos, envíe un correo a: <strong>privacidad@tubosoilygas.com</strong></p>
-                    
-                    <h3 class="mt-4">Modificaciones</h3>
-                    <p>Este aviso puede ser actualizado. La versión vigente siempre estará publicada en nuestro sitio web.</p>
-                    
-                    <p class="mt-5 text-muted">Última actualización: 14 de mayo de 2026</p>
-                </div>
-            </div>
+        <div class="section-title">
+            <span class="subtitle">Lo que ofrecemos</span>
+            <h2>Servicios Especializados</h2>
+            <p>Soluciones integrales para la industria petrolera y energética</p>
+        </div>
+        <div class="row" id="serviciosGridContainer">
+            <!-- Los 12 servicios se cargan con JS -->
+        </div>
+        <div class="text-center mt-5">
+            <a href="contacto.html" class="btn btn-primary-custom">
+                <i class="fas fa-envelope me-2"></i> Solicitar cotización
+            </a>
         </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <h5>Quiénes Somos</h5>
-                <p>Suministro de productos de acero de la más alta calidad para la industria petrolera.</p>
+                <p>Suministro de productos de acero de la más alta calidad para la industria petrolera, petroquímica y energética.</p>
                 <div class="social-links mt-3">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
@@ -138,7 +122,9 @@
                 <h5>Enlaces</h5>
                 <ul class="list-unstyled">
                     <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="fabricacion.html">Fabricación</a></li>
+                    <li><a href="fabricacion-servicios.html">Servicios</a></li>
+                    <li><a href="fabricacion-catalogo.html">Catálogo</a></li>
+                    <li><a href="fabricacion-galeria.html">Galería</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
@@ -151,29 +137,25 @@
             </div>
             <div class="col-lg-3 mb-4">
                 <h5>Horario</h5>
-                <p>Lunes - Viernes: 8:00 AM - 5:30 PM</p>
-                <p>Sabado : 8:00 AM - 2:00 PM</p>
-                <p>Domingos : Cerrado</p>
-            </div> 
+                <p>Lunes a Viernes: 8:00 AM - 5:30 PM</p>
+                <p>Sábados: 8:00 AM - 2:00 PM</p>
+                <p>Domingos: Cerrado</p>
+            </div>
         </div>
-        <hr>
+        <hr class="bg-secondary">
         <div class="text-center pt-3">
-            <p>© 2026 Tuberías y Conexiones Oil & Gas S.A. de C.V.</p>
+            <p class="mb-0">© 2026 Tuberías y Conexiones Oil & Gas S.A. de C.V. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
-<a href="https://api.whatsapp.com/send?phone=5219932325906" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<a href="https://api.whatsapp.com/send?phone=5219932325906" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
-<script>
-    AOS.init();
-    window.addEventListener('scroll', function() {
-        const nav = document.getElementById('mainNav');
-        if (window.scrollY > 100) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    });
-</script>
+<script src="js/fabricacion-servicios.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* ===== HEADER PRINCIPAL ===== */
 .fabricacion-header {
     background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
     padding: 80px 0;
@@ -14,6 +15,63 @@
     margin: 0 auto;
 }
 
+/* ===== BARRA DE NAVEGACIÓN INTERNA (TABS) ===== */
+.fabricacion-tabs-nav {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+.fabricacion-nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 12px 0;
+    margin: 0;
+    list-style: none;
+}
+.fab-nav-link {
+    display: inline-block;
+    padding: 8px 28px;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 40px;
+    transition: var(--transition);
+    font-size: 15px;
+}
+.fab-nav-link:hover {
+    color: var(--primary);
+    background: rgba(255,82,3,0.08);
+}
+.fab-nav-link.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* ===== SECCIÓN SERVICIOS (CTA CARD) ===== */
+.servicios-intro-section {
+    background: var(--light-gray);
+}
+.servicios-cta-card {
+    background: white;
+    border-radius: 24px;
+    padding: 50px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #f0f0f0;
+}
+.servicios-cta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===== TARJETAS DE PROCESO ===== */
 .process-card {
     background: white;
     border-radius: 20px;
@@ -28,6 +86,16 @@
     transform: translateY(-8px);
     box-shadow: var(--shadow-md);
     border-bottom-color: var(--primary);
+}
+.process-card-interactive {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.process-card-interactive:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #fff 0%, #fff8f0 100%);
 }
 .process-number {
     width: 50px;
@@ -50,14 +118,183 @@
     color: var(--gray);
     font-size: 0.95rem;
 }
+.servicios-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
 
-.pdf-preview-card {
+/* ===== TARJETAS DE SERVICIOS COMPLETAS (PÁGINA FABRICACION-SERVICIOS) ===== */
+.servicios-grid-section {
+    background: var(--light-gray);
+}
+.servicio-card-full {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
     transition: var(--transition);
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #f0f0f0;
 }
-.pdf-preview-card:hover {
-    transform: translateY(-5px);
+.servicio-card-full:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+.servicio-icon-full {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,82,3,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.servicio-icon-full i {
+    font-size: 40px;
+    color: var(--primary);
+}
+.servicio-card-full h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.servicio-card-full p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin: 0;
 }
 
+/* ===== TARJETAS DE SERVICIOS DENTRO DEL MODAL ===== */
+.servicio-card-modal {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    border: 1px solid #e9ecef;
+}
+.servicio-card-modal:hover {
+    background: white;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+.servicio-icon-modal {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,82,3,0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.servicio-icon-modal i {
+    font-size: 24px;
+    color: var(--primary);
+}
+.servicio-info-modal {
+    flex: 1;
+}
+.servicio-info-modal h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+.servicio-info-modal p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: var(--gray);
+}
+
+/* ===== TARJETAS DE PROYECTOS (GALERÍA) ===== */
+.proyecto-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    height: 100%;
+}
+.proyecto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+.proyecto-img-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+.proyecto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.proyecto-card:hover .proyecto-img {
+    transform: scale(1.08);
+}
+.proyecto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.proyecto-card:hover .proyecto-overlay {
+    opacity: 1;
+}
+.proyecto-overlay i {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+.proyecto-overlay span {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(255,82,3,0.8);
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+.proyecto-info {
+    padding: 20px;
+}
+.proyecto-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.proyecto-info p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+.proyecto-info .badge {
+    font-size: 11px;
+    padding: 5px 12px;
+}
+
+/* ===== GALERÍA DE FABRICACIONES (PÁGINA PRINCIPAL) ===== */
 .gallery-fabricacion {
     background: var(--light-gray);
 }
@@ -99,13 +336,79 @@
     cursor: pointer;
 }
 
+/* ===== GALERÍA COMPLETA (PÁGINA FABRICACION-GALERIA) ===== */
+.galeria-grid-section {
+    background: var(--light-gray);
+}
+.galeria-filtros {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+}
+.gallery-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 260px;
+}
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+.gallery-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.gallery-card:hover .gallery-card-overlay {
+    opacity: 1;
+}
+.gallery-card-overlay i {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+.gallery-card-overlay span {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(255,82,3,0.8);
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+/* ===== FILTROS ===== */
 .gallery-filter {
     text-align: center;
     margin-bottom: 40px;
 }
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+}
 .filter-btn {
     background: transparent;
-    border: none;
+    border: 1px solid #e0e0e0;
     padding: 8px 24px;
     margin: 5px;
     font-weight: 600;
@@ -115,9 +418,76 @@
 }
 .filter-btn.active, .filter-btn:hover {
     background: var(--primary);
+    border-color: var(--primary);
     color: white;
 }
 
+/* ===== PDF PREVIEW CARD ===== */
+.pdf-preview-card {
+    transition: var(--transition);
+}
+.pdf-preview-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== PDF VIEWER (PÁGINA FABRICACION-CATALOGO) ===== */
+.pdf-viewer-section {
+    background: var(--light-gray);
+}
+.pdf-container {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.pdf-toolbar {
+    background: var(--primary) !important;
+}
+
+/* ===== HEADERS DE CADA PÁGINA ===== */
+.servicios-header {
+    background: linear-gradient(135deg, #1a3a2e 0%, #0a1a12 100%);
+    padding: 80px 0;
+    position: relative;
+}
+.catalogo-header {
+    background: linear-gradient(135deg, #1a2a3e 0%, #0a121a 100%);
+    padding: 80px 0;
+    position: relative;
+}
+.galeria-fab-header {
+    background: linear-gradient(135deg, #3e2a1a 0%, #1a120a 100%);
+    padding: 80px 0;
+    position: relative;
+}
+.servicios-header h1,
+.catalogo-header h1,
+.galeria-fab-header h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.servicios-header .lead,
+.catalogo-header .lead,
+.galeria-fab-header .lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== MODAL DE EQUIPOS ===== */
+.equipo-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+.equipo-card ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* ===== MODAL PDF ===== */
 .modal-xl {
     max-width: 90%;
 }
@@ -126,36 +496,94 @@
         max-width: 1140px;
     }
 }
+
+/* ===== LOGO SECUNDARIO ===== */
 .secondary-logo {
     height: 50px;
     width: auto;
     transition: var(--transition);
 }
-
 .secondary-logo-link {
     display: inline-block;
     transition: var(--transition);
 }
-
 .secondary-logo-link:hover {
     transform: scale(1.05);
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
     .navbar-collapse .d-flex {
         flex-direction: column;
         width: 100%;
         margin-top: 15px;
     }
-    
     .secondary-logo {
         margin-left: 0 !important;
         margin-top: 15px;
         height: 45px;
     }
-    
     .navbar-collapse .d-flex .btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .fabricacion-header h1,
+    .servicios-header h1,
+    .catalogo-header h1,
+    .galeria-fab-header h1 {
+        font-size: 2rem;
+    }
+    .fabricacion-header .lead,
+    .servicios-header .lead,
+    .catalogo-header .lead,
+    .galeria-fab-header .lead {
+        font-size: 1rem;
+    }
+    .fab-nav-link {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    .servicio-card-modal {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .servicio-icon-modal {
+        margin-bottom: 10px;
+    }
+    .proyecto-img-container {
+        height: 200px;
+    }
+    .gallery-card {
+        height: 220px;
+    }
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    .process-card h4 {
+        font-size: 1.1rem;
+    }
+    .process-card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-card {
+        height: 200px;
+    }
+    .filter-btn {
+        padding: 4px 12px;
+        font-size: 11px;
+    }
+    .servicio-card-full h4 {
+        font-size: 0.9rem;
+    }
+    .servicio-card-full p {
+        font-size: 0.75rem;
     }
 }

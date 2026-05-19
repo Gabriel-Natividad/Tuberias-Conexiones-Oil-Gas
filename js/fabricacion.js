@@ -1,14 +1,83 @@
-
+// ======================== PROCESO DE FABRICACIÓN (6 PASOS) ========================
 const procesoPasos = [
     { numero: "01", titulo: "Ingeniería y Diseño", descripcion: "Desarrollamos planos y especificaciones técnicas según requerimientos del cliente." },
     { numero: "02", titulo: "Selección de Materiales", descripcion: "Materia prima certificada con trazabilidad y calidad asegurada." },
     { numero: "03", titulo: "Fabricación", descripcion: "Procesos de corte, soldadura, forja y mecanizado de precisión." },
     { numero: "04", titulo: "Control de Calidad", descripcion: "Inspección dimensional, pruebas hidrostáticas y certificación." },
     { numero: "05", titulo: "Embarque y Entrega", descripcion: "Logística especializada para entrega en tiempo y forma." },
-    { numero: "06", titulo: "Equipos y Maquinaria", descripcion: "Contamos con maquinaria especializada y procesos de soldadura certificados. Haga clic para conocer más.", esInteractivo: true }
+    { 
+        numero: "06", 
+        titulo: "Servicios Especializados", 
+        descripcion: "Ofrecemos una amplia gama de servicios de fabricación, maquinado, soldadura y mantenimiento industrial. Haga clic para conocer más.",
+        esInteractivo: true 
+    }
 ];
 
-// GALERÍA - 3 PROYECTOS REALES (basados en el PDF)
+// ======================== SERVICIOS ESPECIALIZADOS (DESDE LA IMAGEN) ========================
+const serviciosEspecializados = [
+    { 
+        icono: "fas fa-industry", 
+        titulo: "FABRICACIONES Y MAQUINADO DE PIEZAS",
+        descripcion: "Fabricación de piezas a la medida y maquinado de precisión según especificaciones del cliente."
+    },
+    { 
+        icono: "fas fa-exchange-alt", 
+        titulo: "FABRICACIONES DE CROSS OVER",
+        descripcion: "Fabricación de Crossover FIG100, 200, 206, 602 y 1502 para conexiones especiales en sistemas de alta presión."
+    },
+    { 
+        icono: "fas fa-cut", 
+        titulo: "RANURADO DE TUBERIA",
+        descripcion: "Ranurado de tubería C-10 y C-40 para sistemas de unión mecánica rápida."
+    },
+    { 
+        icono: "fas fa-anchor", 
+        titulo: "FABRICACION DE ANCLAS DE CIMENTACIÓN",
+        descripcion: "Fabricación de anclas de cimentación para estructuras industriales y equipos pesados."
+    },
+    { 
+        icono: "fas fa-tools", 
+        titulo: "ROSCADO Y CORTE DE TUBERIA",
+        descripcion: "Servicio de roscado y corte de tubería en diferentes diámetros y cédulas."
+    },
+    { 
+        icono: "fas fa-fire", 
+        titulo: "SOLDADURA EN GENERAL",
+        descripcion: "Procesos de soldadura GTAW (TIG), SMAW (eléctrica) y otros procesos certificados."
+    },
+    { 
+        icono: "fas fa-vial", 
+        titulo: "PRUEBAS NO DESTRUCTIVAS",
+        descripcion: "Realizamos pruebas no destructivas (líquidos penetrantes, ultrasonido, radiografía) para garantizar la calidad."
+    },
+    { 
+        icono: "fas fa-drafting-compass", 
+        titulo: "PAILERIA",
+        descripcion: "Fabricación de ductos, tolvas, tanques y estructuras metálicas a la medida."
+    },
+    { 
+        icono: "fas fa-building", 
+        titulo: "ESTRUCTURAS Y MONTAJES INDUSTRIALES",
+        descripcion: "Diseño, fabricación y montaje de estructuras metálicas para plantas industriales."
+    },
+    { 
+        icono: "fas fa-valve", 
+        titulo: "MANTENIMIENTOS A VÁLVULAS",
+        descripcion: "Mantenimiento preventivo y correctivo de válvulas de alta y baja presión."
+    },
+    { 
+        icono: "fas fa-water", 
+        titulo: "MANTENIMIENTO BOMBAS ELECTRICAS",
+        descripcion: "Reparación y mantenimiento de bombas eléctricas industriales."
+    },
+    { 
+        icono: "fas fa-car", 
+        titulo: "REPARACIÓN DE GATOS HIDRAULICOS",
+        descripcion: "Reparación y mantenimiento de gatos hidráulicos de diferentes capacidades."
+    }
+];
+
+// ======================== PROYECTOS REALES (GALERÍA DE FABRICACIONES) ========================
 const proyectosReales = [
     {
         img: "images/proyectos/manifold-6-vias.jpg",  
@@ -30,36 +99,60 @@ const proyectosReales = [
         descripcion: "Procesos de soldadura TIG/MIG/SMAW para líneas de producción industrial",
         categoria: "soldadura",
         detalles: "Aplicado en sector alimenticio, petrolero y comercial con normativas internacionales."
+    },
+    {
+        img: "images/proyectos/crossover-fig1502.jpg",
+        titulo: "Crossover FIG 1502",
+        descripcion: "Fabricación de conexiones crossover para sistemas de alta presión",
+        categoria: "crossover",
+        detalles: "Fabricados bajo norma API 6A con materiales de alta resistencia."
+    },
+    {
+        img: "images/proyectos/ranurado-tuberia.jpg",
+        titulo: "Ranurado de Tubería",
+        descripcion: "Tubería ranurada C-40 para sistemas contra incendios",
+        categoria: "tuberia",
+        detalles: "Servicio de ranurado en tubería de acero al carbón."
+    },
+    {
+        img: "images/proyectos/anclas-cimentacion.jpg",
+        titulo: "Anclas de Cimentación",
+        descripcion: "Fabricación de anclas para estructuras industriales",
+        categoria: "estructuras",
+        detalles: "Anclas fabricadas bajo especificaciones técnicas del proyecto."
     }
 ];
 
-// Rutas de archivos
+// Ruta del PDF
 const pdfUrl = "pdf/docs/catalogo_fabricacion.pdf";
 
+// ======================== FUNCIONES DE RENDERIZADO ========================
 
+// Renderizar los 6 pasos del proceso
 function renderProceso() {
     const container = document.getElementById('processContainer');
     if (container) {
         container.innerHTML = procesoPasos.map(p => `
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                 <div class="process-card ${p.esInteractivo ? 'process-card-interactive' : ''}" 
-                     ${p.esInteractivo ? 'onclick="abrirModalEquipos()"' : ''}>
+                     ${p.esInteractivo ? 'onclick="abrirModalServicios()"' : ''}>
                     <div class="process-number">${p.numero}</div>
                     <h4>${p.titulo}</h4>
                     <p>${p.descripcion}</p>
-                    ${p.esInteractivo ? '<i class="fas fa-hand-pointer fa-2x mt-3 text-primary"></i>' : ''}
+                    ${p.esInteractivo ? '<i class="fas fa-hand-pointer fa-2x mt-3 text-primary"></i><span class="servicios-badge">12 servicios</span>' : ''}
                 </div>
             </div>
         `).join('');
     }
 }
 
+// Renderizar la galería de proyectos (fabricaciones)
 function renderProyectos() {
     const container = document.getElementById('galleryFabricacion');
     if (!container) return;
     
     container.innerHTML = proyectosReales.map(proyecto => `
-        <div class="col-md-4 col-sm-12 mb-4">
+        <div class="col-md-4 col-sm-6 mb-4">
             <div class="proyecto-card">
                 <div class="proyecto-img-container">
                     <img src="${proyecto.img}" alt="${proyecto.titulo}" class="proyecto-img" loading="lazy" 
@@ -79,11 +172,78 @@ function renderProyectos() {
     `).join('');
 }
 
-window.abrirModalEquipos = () => {
-    const modal = new bootstrap.Modal(document.getElementById('equiposModal'));
-    modal.show();
+// Renderizar los servicios especializados en el modal
+function renderServiciosModal() {
+    const container = document.getElementById('serviciosListContainer');
+    if (!container) return;
+    
+    container.innerHTML = serviciosEspecializados.map(servicio => `
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="servicio-card-modal">
+                <div class="servicio-icon-modal">
+                    <i class="${servicio.icono}"></i>
+                </div>
+                <div class="servicio-info-modal">
+                    <h5>${servicio.titulo}</h5>
+                    <p>${servicio.descripcion}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ======================== MODALES ========================
+
+// Abrir modal con todos los servicios especializados
+window.abrirModalServicios = () => {
+    // Verificar si el modal ya existe
+    let modal = document.getElementById('serviciosModal');
+    if (!modal) {
+        // Crear el modal dinámicamente
+        modal = document.createElement('div');
+        modal.id = 'serviciosModal';
+        modal.className = 'modal fade';
+        modal.setAttribute('tabindex', '-1');
+        modal.innerHTML = `
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title">
+                            <i class="fas fa-cogs me-2"></i> Servicios Especializados
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted mb-4">Conozca todos los servicios que ofrecemos en nuestro taller y en campo:</p>
+                        <div class="row" id="serviciosListContainer"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="contacto.html" class="btn btn-primary-custom">
+                            <i class="fas fa-envelope me-2"></i> Solicitar cotización
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+    
+    // Renderizar los servicios dentro del modal
+    renderServiciosModal();
+    
+    // Mostrar el modal
+    const bsModal = new bootstrap.Modal(modal);
+    bsModal.show();
 };
 
+// Abrir modal de equipos (maquinaria)
+window.abrirModalEquipos = () => {
+    const modal = new bootstrap.Modal(document.getElementById('equiposModal'));
+    if (modal) modal.show();
+};
+
+// Abrir modal con detalles de proyecto
 window.openModalProyecto = (titulo, descripcion, detalles, imgSrc) => {
     let modal = document.getElementById('proyectoModalDetail');
     if (!modal) {
@@ -129,19 +289,21 @@ window.openModalProyecto = (titulo, descripcion, detalles, imgSrc) => {
     bsModal.show();
 };
 
+// Abrir visor de PDF
 function openPdfViewer() {
     if (pdfUrl) {
         window.open(pdfUrl, '_blank');
     } else {
-        alert('El PDF no está disponible temporalmente.');
+        alert('El PDF no está disponible temporalmente. Por favor contacte al administrador.');
     }
 }
 
+// ======================== INICIALIZACIÓN ========================
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({ duration: 800, once: true });
     
     renderProceso();
-    renderProyectos();  
+    renderProyectos();
     
     const openBtn = document.getElementById('openPdfBtn');
     const openBtn2 = document.getElementById('openPdfBtn2');
@@ -150,6 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (openBtn2) openBtn2.addEventListener('click', openPdfViewer);
 });
 
+// Navbar scroll effect
 window.addEventListener('scroll', function() {
     const nav = document.getElementById('mainNav');
     if (nav) {

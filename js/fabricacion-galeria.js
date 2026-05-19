@@ -1,27 +1,4 @@
-const galeriaEntregas = [
-    // Tubería
-    { img: "images/galeria/entregas/entrega1.jpg", category: "tuberia", titulo: "Entrega de tubería de acero al carbón - Ciudad del Carmen" },
-    { img: "images/galeria/entregas/entrega2.jpg", category: "tuberia", titulo: "Envío de tubería sin costura a refinería de Salina Cruz" },
-    { img: "images/galeria/entregas/entrega3.jpg", category: "tuberia", titulo: "Carga de tubería API 5L para gasoducto" },
-    { img: "images/galeria/entregas/entrega4.jpg", category: "tuberia", titulo: "Suministro de tubería inoxidable a planta química" },
-    
-    // Válvulas
-    { img: "images/galeria/entregas/entrega5.jpg", category: "valvulas", titulo: "Entrega de válvulas de compuerta para plataforma marina" },
-    { img: "images/galeria/entregas/entrega6.jpg", category: "valvulas", titulo: "Válvulas de bola de alta presión - Dos Bocas" },
-    { img: "images/galeria/entregas/entrega7.jpg", category: "valvulas", titulo: "Suministro de válvulas de seguridad" },
-    
-    // Conexiones
-    { img: "images/galeria/entregas/entrega8.jpg", category: "conexiones", titulo: "Conexiones forjadas para planta de proceso" },
-    { img: "images/galeria/entregas/entrega9.jpg", category: "conexiones", titulo: "Bridas y accesorios para proyecto termoeléctrico" },
-    { img: "images/galeria/entregas/entrega10.jpg", category: "conexiones", titulo: "Entrega de conexiones roscadas a taller industrial" },
-    
-    // Envíos especiales
-    { img: "images/galeria/entregas/entrega11.jpg", category: "envios", titulo: "Envío especial a Villahermosa - Carga completa" },
-    { img: "images/galeria/entregas/entrega12.jpg", category: "envios", titulo: "Logística de entrega a Ciudad de México" },
-    { img: "images/galeria/entregas/entrega13.jpg", category: "envios", titulo: "Despacho a planta de fertilizantes" }
-];
-
-
+// ======================== GALERÍA DE FABRICACIONES ========================
 const galeriaFabricaciones = [
     // Tubería Fabricada
     { img: "images/galeria/gal1.jpeg", category: "tuberia", titulo: "Fabricación de tubería sin costura para alta presión" },
@@ -45,39 +22,35 @@ const galeriaFabricaciones = [
     { img: "images/galeria/gal13.jpeg", category: "especiales", titulo: "Fabricación especial de skids para instrumentación" },
     { img: "images/galeria/gal14.jpeg", category: "especiales", titulo: "Estructuras metálicas para montaje de tubería" },
     { img: "images/galeria/gal15.jpeg", category: "especiales", titulo: "Fabricación de manifold de alta presión" },
-    { img: "images/galeria/gal16.jpeg", category: "especiales", titulo: "skid industrial para conduccion de fluidos" },
+    { img: "images/galeria/gal16.jpeg", category: "especiales", titulo: "Skid industrial para conducción de fluidos" }
 ];
 
-const isEntregasPage = window.location.pathname.includes('galeria_entregas');
-const isFabricacionesPage = window.location.pathname.includes('galeria_fabricaciones');
-
-let currentGallery = [];
+// Variables de control
+let currentGallery = galeriaFabricaciones;
 let currentFilter = 'all';
 let itemsToShow = 12;
 let currentItemsCount = itemsToShow;
 
-
-// Obtener la galería correcta
-function getGallery() {
-    if (isEntregasPage) return galeriaEntregas;
-    if (isFabricacionesPage) return galeriaFabricaciones;
-    return [];
-}
+// ======================== FUNCIONES ========================
 
 // Renderizar galería con filtro y límite
 function renderGaleria(filter = 'all', limit = itemsToShow) {
-    const container = document.getElementById(isEntregasPage ? 'galeriaEntregasContainer' : 'galeriaFabricacionesContainer');
-    if (!container) return;
+    const container = document.getElementById('galeriaFabricacionesContainer');
+    if (!container) {
+        console.error('No se encontró el contenedor "galeriaFabricacionesContainer"');
+        return;
+    }
     
-    let galleryData = getGallery();
-    let filtered = galleryData;
+    // Filtrar por categoría
+    let filtered = galeriaFabricaciones;
     if (filter !== 'all') {
-        filtered = galleryData.filter(item => item.category === filter);
+        filtered = galeriaFabricaciones.filter(item => item.category === filter);
     }
     
     currentGallery = filtered;
     const itemsToRender = filtered.slice(0, limit);
     
+    // Si no hay imágenes
     if (itemsToRender.length === 0) {
         container.innerHTML = `
             <div class="col-12 text-center py-5">
@@ -91,9 +64,11 @@ function renderGaleria(filter = 'all', limit = itemsToShow) {
         return;
     }
     
+    // Renderizar imágenes
     container.innerHTML = itemsToRender.map((item, index) => `
         <div class="col-md-4 col-sm-6 gallery-item" data-category="${item.category}" data-aos="fade-up" data-aos-delay="${(index % 6) * 50}">
-            <img src="${item.img}" alt="${item.titulo}" loading="lazy" onerror="this.src='images/galeria/placeholder.jpg'">
+            <img src="${item.img}" alt="${item.titulo}" loading="lazy" 
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Imagen+no+disponible';">
             <div class="gallery-overlay" onclick="openModalImage('${item.img}', '${item.titulo}')">
                 <i class="fas fa-search-plus"></i>
                 <span>Ver más</span>
@@ -107,29 +82,25 @@ function renderGaleria(filter = 'all', limit = itemsToShow) {
     // Mostrar/ocultar botón "Cargar más"
     const loadMoreContainer = document.getElementById('loadMoreContainer');
     if (loadMoreContainer) {
-        if (filtered.length > currentItemsCount) {
-            loadMoreContainer.style.display = 'block';
-        } else {
-            loadMoreContainer.style.display = 'none';
-        }
+        loadMoreContainer.style.display = filtered.length > currentItemsCount ? 'block' : 'none';
     }
 }
 
 // Cargar más imágenes
 function loadMoreImages() {
     currentItemsCount += itemsToShow;
-    const filtered = currentGallery;
-    const container = document.getElementById(isEntregasPage ? 'galeriaEntregasContainer' : 'galeriaFabricacionesContainer');
+    const container = document.getElementById('galeriaFabricacionesContainer');
+    if (!container) return;
     
-    const nuevosItems = filtered.slice(currentItemsCount - itemsToShow, currentItemsCount);
+    const nuevosItems = currentGallery.slice(currentItemsCount - itemsToShow, currentItemsCount);
     
-    nuevosItems.forEach((item, index) => {
+    nuevosItems.forEach((item) => {
         const col = document.createElement('div');
         col.className = 'col-md-4 col-sm-6 gallery-item';
         col.setAttribute('data-category', item.category);
-        col.setAttribute('data-aos', 'fade-up');
         col.innerHTML = `
-            <img src="${item.img}" alt="${item.titulo}" loading="lazy" onerror="this.src='images/galeria/placeholder.jpg'">
+            <img src="${item.img}" alt="${item.titulo}" loading="lazy" 
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Imagen+no+disponible';">
             <div class="gallery-overlay" onclick="openModalImage('${item.img}', '${item.titulo}')">
                 <i class="fas fa-search-plus"></i>
                 <span>Ver más</span>
@@ -143,7 +114,7 @@ function loadMoreImages() {
     
     // Ocultar botón si ya no hay más
     const loadMoreContainer = document.getElementById('loadMoreContainer');
-    if (loadMoreContainer && filtered.length <= currentItemsCount) {
+    if (loadMoreContainer && currentGallery.length <= currentItemsCount) {
         loadMoreContainer.style.display = 'none';
     }
 }
@@ -168,32 +139,13 @@ function initFiltrosGaleria() {
             btns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             currentFilter = this.getAttribute('data-filter');
-            currentItemsCount = itemsToShow;
+            currentItemsCount = itemsToShow; // Reiniciar contador
             renderGaleria(currentFilter, currentItemsCount);
         });
     });
 }
 
-// Contador animado (para las estadísticas)
-function animateCounters() {
-    const counters = document.querySelectorAll('.count-number');
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-count'));
-        let current = 0;
-        const increment = target / 50;
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                counter.textContent = Math.ceil(current);
-                setTimeout(updateCounter, 30);
-            } else {
-                counter.textContent = target;
-            }
-        };
-        updateCounter();
-    });
-}
-
+// ======================== INICIALIZACIÓN ========================
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({ duration: 800, once: true });
     
@@ -205,11 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', loadMoreImages);
-    }
-    
-    // Animar contadores si existen (solo en página de entregas)
-    if (isEntregasPage) {
-        setTimeout(animateCounters, 500);
     }
 });
 
