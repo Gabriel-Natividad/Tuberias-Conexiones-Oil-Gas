@@ -58,7 +58,6 @@
     text-decoration: underline;
 }
 
-/* Formulario */
 .form-wrapper {
     transition: var(--transition);
 }

@@ -1,4 +1,3 @@
-// ======================== SERVICIOS ESPECIALIZADOS ========================
 const serviciosEspecializados = [
     { icono: "fas fa-industry", titulo: "FABRICACIONES Y MAQUINADO DE PIEZAS", descripcion: "Fabricación de piezas a la medida y maquinado de precisión según especificaciones del cliente." },
     { icono: "fas fa-exchange-alt", titulo: "FABRICACIONES DE CROSS OVER", descripcion: "Fabricación de Crossover FIG100, 200, 206, 602 y 1502 para conexiones especiales en sistemas de alta presión." },

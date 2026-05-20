@@ -1,23 +1,108 @@
 const galeriaFabricaciones = [
-    { img: "images/galeria/gal1.jpeg", category: "tuberia", titulo: "Fabricación de tubería sin costura para alta presión" },
-    { img: "images/galeria/gal2.jpeg", category: "tuberia", titulo: "Proceso de soldadura de tubería de acero al carbón" },
-    { img: "images/galeria/gal3.jpeg", category: "tuberia", titulo: "Corte y biselado de tubería API 5L" },
-    { img: "images/galeria/gal4.jpeg", category: "tuberia", titulo: "Tubería inoxidable fabricada bajo norma ASTM" },
- 
-    { img: "images/galeria/gal5.jpeg", category: "conexiones", titulo: "Fabricación de codos forjados a medida" },
-    { img: "images/galeria/gal6.jpeg", category: "conexiones", titulo: "Producción de tes y reducciones industriales" },
-    { img: "images/galeria/gal7.jpeg", category: "conexiones", titulo: "Conexiones de instrumentación de precisión" },
-    { img: "images/galeria/gal8.jpeg", category: "conexiones", titulo: "Bridas personalizadas para proyectos especiales" },
+    {
+        img: "images/galeria/1.png",
+        category: "tuberia",
+        titulo: "Sistema de tubería aérea industrial",
+        especificacion: "Instalación de líneas de tubería suspendidas para conducción de fluidos en planta industrial."
+    },
 
-    { img: "images/galeria/gal9.jpeg", category: "valvulas", titulo: "Ensamblaje de válvulas de compuerta" },
-    { img: "images/galeria/gal10.jpeg", category: "valvulas", titulo: "Válvulas de globo para alta temperatura" },
-    { img: "images/galeria/gal11.jpeg", category: "valvulas", titulo: "Pruebas hidrostáticas en válvulas de bola" },
-    { img: "images/galeria/gal12.jpeg", category: "valvulas", titulo: "Reparacion interna de valvulas de control"},
-    
-    { img: "images/galeria/gal13.jpeg", category: "especiales", titulo: "Fabricación especial de skids para instrumentación" },
-    { img: "images/galeria/gal14.jpeg", category: "especiales", titulo: "Estructuras metálicas para montaje de tubería" },
-    { img: "images/galeria/gal15.jpeg", category: "especiales", titulo: "Fabricación de manifold de alta presión" },
-    { img: "images/galeria/gal16.jpeg", category: "especiales", titulo: "Skid industrial para conducción de fluidos" }
+    {
+        img: "images/galeria/2.png",
+        category: "especiales",
+        titulo: "Skid industrial para conducción de fluidos",
+        especificacion: "Módulo skid fabricado con tubería, válvulas e instrumentación para procesos industriales."
+    },
+
+    {
+        img: "images/galeria/3.png",
+        category: "turbinas",
+        titulo: "Instalación y soldadura de tubería industrial",
+        especificacion: "Proceso de unión y montaje de tubería para sistemas de conducción hidráulica e industrial."
+    },
+
+    {
+        img: "images/galeria/4.png",
+        category: "valvulas",
+        titulo: "Manifold de válvulas industriales",
+        especificacion: "Sistema de válvulas ensambladas para control y distribución de fluidos a presión."
+    },
+
+    {
+        img: "images/galeria/5.png",
+        category: "conexiones",
+        titulo: "Conexiones reductoras de acero inoxidable",
+        especificacion: "Fabricación de conexiones tipo reducción para líneas de proceso industrial."
+    },
+
+    {
+        img: "images/galeria/6.png",
+        category: "especiales",
+        titulo: "Estructura metálica para montaje",
+        especificacion: "Fabricación y alineación de estructuras metálicas para soporte de tuberías."
+    },
+
+    {
+        img: "images/galeria/7.png",
+        category: "conexiones",
+        titulo: "Bridas y conexiones mecanizadas",
+        especificacion: "Conjunto de bridas industriales y accesorios fabricados para alta presión."
+    },
+
+    {
+        img: "images/galeria/9.png",
+        category: "conexiones",
+        titulo: "Soldadura de conexión bridada",
+        especificacion: "Proceso de soldadura industrial en conexión tipo brida para sistemas de tubería."
+    },
+    {
+        img: "images/galeria/10.png",
+        category: "turbinas",
+        titulo: "Rotor industrial de turbina",
+    especificacion: "Rotor multietapa de turbina industrial utilizado en sistemas de generación de energía y compresión."
+    },
+
+    {
+        img: "images/galeria/11.png",
+        category: "tuberia",
+        titulo: "Tubería soldada en proceso",
+        especificacion: "Fabricación y unión de tubería industrial mediante soldadura especializada."
+    },
+
+    {
+        img: "images/galeria/12.png",
+        category: "especiales",
+        titulo: "Sistema modular industrial",
+        especificacion: "Ensamblaje de componentes industriales para aplicaciones de proceso."
+    },
+
+    {
+        img: "images/galeria/13.png",
+        category: "conexiones",
+        titulo: "Accesorios y conexiones metálicas",
+        especificacion: "Fabricación de conexiones industriales de acero para líneas de conducción."
+    },
+
+    {
+        img: "images/galeria/14.png",
+        category: "valvulas",
+        titulo: "Válvula de control industrial",
+        especificacion: "Equipo de regulación y control para sistemas hidráulicos e industriales."
+    },
+
+    {
+        img: "images/galeria/15.png",
+        category: "especiales",
+        titulo: "Fabricación estructural especializada",
+        especificacion: "Construcción de estructuras metálicas para aplicaciones industriales."
+    },
+
+    {
+        img: "images/galeria/16.png",
+        category: "tuberia",
+        titulo: "Red de tuberías industriales",
+        especificacion: "Sistema de conducción de fluidos diseñado para procesos industriales."
+    }
+
 ];
 
 let currentGallery = galeriaFabricaciones;

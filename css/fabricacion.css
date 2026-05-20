@@ -1,4 +1,3 @@
-/* ===== HEADER PRINCIPAL ===== */
 .fabricacion-header {
     background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
     padding: 80px 0;
@@ -15,7 +14,6 @@
     margin: 0 auto;
 }
 
-/* ===== BARRA DE NAVEGACIÓN INTERNA (TABS) ===== */
 .fabricacion-tabs-nav {
     background: white;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
@@ -52,7 +50,6 @@
     color: white;
 }
 
-/* ===== SECCIÓN SERVICIOS (CTA CARD) ===== */
 .servicios-intro-section {
     background: var(--light-gray);
 }
@@ -71,7 +68,6 @@
     box-shadow: var(--shadow-lg);
 }
 
-/* ===== TARJETAS DE PROCESO ===== */
 .process-card {
     background: white;
     border-radius: 20px;
@@ -130,7 +126,6 @@
     font-weight: 600;
 }
 
-/* ===== TARJETAS DE SERVICIOS COMPLETAS (PÁGINA FABRICACION-SERVICIOS) ===== */
 .servicios-grid-section {
     background: var(--light-gray);
 }
@@ -173,7 +168,6 @@
     margin: 0;
 }
 
-/* ===== TARJETAS DE SERVICIOS DENTRO DEL MODAL ===== */
 .servicio-card-modal {
     background: #f8f9fa;
     border-radius: 15px;
@@ -219,7 +213,6 @@
     color: var(--gray);
 }
 
-/* ===== TARJETAS DE PROYECTOS (GALERÍA) ===== */
 .proyecto-card {
     background: white;
     border-radius: 16px;
@@ -294,7 +287,6 @@
     padding: 5px 12px;
 }
 
-/* ===== GALERÍA DE FABRICACIONES (PÁGINA PRINCIPAL) ===== */
 .gallery-fabricacion {
     background: var(--light-gray);
 }
@@ -336,7 +328,6 @@
     cursor: pointer;
 }
 
-/* ===== GALERÍA COMPLETA (PÁGINA FABRICACION-GALERIA) ===== */
 .galeria-grid-section {
     background: var(--light-gray);
 }
@@ -394,7 +385,6 @@
     border-radius: 25px;
 }
 
-/* ===== FILTROS ===== */
 .gallery-filter {
     text-align: center;
     margin-bottom: 40px;
@@ -422,7 +412,6 @@
     color: white;
 }
 
-/* ===== PDF PREVIEW CARD ===== */
 .pdf-preview-card {
     transition: var(--transition);
 }
@@ -430,7 +419,6 @@
     transform: translateY(-5px);
 }
 
-/* ===== PDF VIEWER (PÁGINA FABRICACION-CATALOGO) ===== */
 .pdf-viewer-section {
     background: var(--light-gray);
 }
@@ -443,7 +431,6 @@
     background: var(--primary) !important;
 }
 
-/* ===== HEADERS DE CADA PÁGINA ===== */
 .servicios-header {
     background: linear-gradient(135deg, #1a3a2e 0%, #0a1a12 100%);
     padding: 80px 0;
@@ -474,7 +461,6 @@
     margin: 0 auto;
 }
 
-/* ===== MODAL DE EQUIPOS ===== */
 .equipo-card {
     background: #f8f9fa;
     border-radius: 16px;
@@ -487,7 +473,6 @@
     font-size: 14px;
 }
 
-/* ===== MODAL PDF ===== */
 .modal-xl {
     max-width: 90%;
 }
@@ -497,7 +482,6 @@
     }
 }
 
-/* ===== LOGO SECUNDARIO ===== */
 .secondary-logo {
     height: 50px;
     width: auto;
@@ -511,7 +495,6 @@
     transform: scale(1.05);
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
     .navbar-collapse .d-flex {
         flex-direction: column;
