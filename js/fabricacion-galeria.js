@@ -101,8 +101,64 @@ const galeriaFabricaciones = [
         category: "tuberia",
         titulo: "Red de tuberías industriales",
         especificacion: "Sistema de conducción de fluidos diseñado para procesos industriales."
-    }
+    },
 
+    {
+        img: "images/galeria/17.png",
+        category: "",
+        titulo: "",
+        especificacion: "", 
+    },
+
+    {
+        img: "images/galeria/18.png",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+
+    {
+        img: "images/galeria/19.png",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+    {
+        img: "",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+    {
+        img: "",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+    {
+        img: "",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+    {
+        img: "",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+    {
+        img: "",
+        category: "",
+        titulo: "",
+        especificacion: "",   
+    },
+    {
+        img: "",
+        category: "",
+        titulo: "",
+        especificacion: "",     
+    }
 ];
 
 let currentGallery = galeriaFabricaciones;

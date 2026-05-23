@@ -231,3 +231,21 @@
         text-align: center;
     }
 }
+.logo-img {
+    max-height: 90px;
+    transition: var(--transition);
+}
+
+.secondary-logo {
+    height: 70px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.secondary-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    align-items: center;
+}
