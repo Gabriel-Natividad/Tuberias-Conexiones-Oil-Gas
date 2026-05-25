@@ -74,20 +74,10 @@ const productos = [
         imagen: "images/productos/conexion-hammber.png",
         pdf: "pdf/docs/ficha8.pdf"
     },
-
-    // VÁLVULAS (3 productos)
-    {
-        id: 10,
-        nombre: "Niples y Coples de Acero al Carbon",
-        categoria: "valvulas",
-        descripcion: "Cople con costura cédula 40 negro y galvanizado, diam. de ¼” a 6“ y 8 a 16” ...",
-        imagen: "images/productos/valvula-compuerta.png",
-       pdf: "pdf/docs/ficha9.pdf"
-    },
     {
         id: 11,
         nombre: "Nipolet, Sockolet y Weidolet",
-        categoria: "valvulas",
+        categoria: "conexiones",
         descripcion: "Acero al carbón forjado, astm a-105 de 3000# a 6000# pregunte por otras opciones ...",
         imagen: "images/productos/valvula-globo.png",
         pdf: "pdf/docs/ficha9.pdf"
@@ -95,7 +85,7 @@ const productos = [
     {
         id: 12,
         nombre: "Empaquetes Espirometalicos, y Anillos Metalicos",
-        categoria: "valvulas",
+        categoria: "accesorios",
         descripcion: "Empaques de anillos para bridas (rtj) de acero inoxidable tipo 316 en forma oval y octagonal...",
         imagen: "images/productos/valvula-bola.png",
         pdf: "pdf/docs/anillos.pdf"

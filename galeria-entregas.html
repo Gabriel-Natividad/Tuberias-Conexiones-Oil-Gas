@@ -2,17 +2,16 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Inicio | Tuberías y Conexiones Oil & Gas - Soluciones Industriales</title>
-<meta name="description" content="Diseño, construcción, suministros, mantenimiento de equipos y válvulas de alta presión. Especialistas en tubería de acero, conexiones forjadas e instrumentación en Villahermosa, Tabasco, México.">
-<meta name="keywords" content="Tuberia acero al carbon tabasco, tuberia de acero inoxidable tabasco, tuberia sin costura tabasco, conexiones para instrumentacion tabasco, Oil & Gas Mexico"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Galería de Entregas | Tuberías y Conexiones Oil & Gas</title>
+<meta name="description" content="Galería de entregas, suministros y transporte de materiales para la industria petrolera. Entregas verificadas en Villahermosa, Tabasco.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/galeria-entregas.css">
 
 <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
@@ -70,81 +69,75 @@
                 <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
             </ul>
             <div class="d-flex align-items-center">
-                <a href="contacto.html" class="btn btn-primary-custom">COTIZAR</a>
+                <a href="contacto.html" class="btn btn-primary-custom ms-lg-3 mt-3 mt-lg-0">COTIZAR</a>
                 <img src="images/logo.png" alt="Logo Secundario" class="secondary-logo ms-3">
             </div>
         </div>
     </div>
 </nav>
 
-<section class="hero-slider">
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper" id="dynamicSlides"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+<section class="page-header galeria-header entregas-header">
+    <div class="container text-center">
+        <h1 data-aos="fade-up">Galería de Entregas</h1>
+        <p class="lead text-white mt-3" data-aos="fade-up" data-aos-delay="100">Entregas verificadas y suministros especializados</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Galería de Entregas</li>
+            </ol>
+        </nav>
     </div>
 </section>
 
-<section class="py-5" style="background: var(--light-gray);">
+<section class="calidad-section py-4 bg-primary text-white">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4" data-aos="fade-right">
-                <img src="images/nosotros.jpeg" alt="Nosotros" class="img-fluid rounded-4 shadow">
+        <div class="row align-items-center text-center text-md-start">
+            <div class="col-md-8">
+                <h4 class="text-white mb-2"><i class="fas fa-truck me-2"></i> Entregas verificadas en tiempo récord</h4>
+                <p class="mb-0 opacity-75">Logística especializada y suministros certificados para la industria petrolera</p>
             </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <span class="subtitle text-primary fw-bold">LA EMPRESA</span>
-                <h2 class="mt-2">Soluciones Innovadoras para la Industria</h2>
-                <p class="lead">Especialistas en alta presión de fluidos, gas y vapor.</p>
-                <p>Somos una empresa dedicada al suministro de productos de acero y metales con la más alta calidad requerida por la industria petrolera, petroquímica, gasera, constructora, eléctrica, minera, azucarera, hidráulica, alimenticia, papelera y farmacéutica.</p>
-                <div class="d-flex align-items-center mt-4">
-                    <img src="images/favicon.png" alt="CEO" style="width: 60px; height: 60px; border-radius: 50%;">
-                    <div class="ms-3">
-                        <strong>Ign. Hugo Ramirez Fuentes</strong><br>
-                        <span class="text-primary">Director General</span>
-                    </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <a href="contacto.html" class="btn btn-light text-primary fw-bold">Solicitar cotización <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="filtros-galeria py-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="gallery-filters">
+                    <button class="filter-galeria-btn" data-filter="suministro">Suministros</button>
                 </div>
-                <a href="nosotros.html" class="btn btn-primary-custom mt-4">Conocer más</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5">
+<section class="galeria-grid-section py-5">
     <div class="container">
-        <div class="section-title">
-            <span class="subtitle">NUESTROS SERVICIOS</span>
-            <h2>Especialistas en Alta Presión</h2>
+        <div class="row" id="galeriaEntregasContainer">
         </div>
-        <div class="row" id="servicesContainer"></div>
+        
+        <div class="text-center mt-5" id="loadMoreContainer" style="display: none;">
+            <button class="btn btn-outline-custom" id="loadMoreBtn">
+                <i class="fas fa-plus-circle me-2"></i> Cargar más imágenes
+            </button>
+        </div>
     </div>
 </section>
 
-<section class="py-5 position-relative video-section">
-    <div class="container text-center text-white py-5">
-        <h2 class="text-white">Experiencia y Calidad</h2>
-        <p>Tenemos un equipo de profesionales con amplia experiencia en la fabricación y suministro.</p>
-        <a href="https://www.youtube.com/watch?v=5cPu349E_Cg" class="btn btn-outline-light btn-lg rounded-pill mt-3 video-popup"><i class="fas fa-play me-2"></i> Ver Video</a>
+<section class="cta-entregas py-5" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);">
+    <div class="container text-center">
+        <h3 class="text-white mb-3">¿Necesitas un suministro urgente?</h3>
+        <p class="text-white-50 mb-4">Contáctanos y te aseguramos la entrega verificada de tus materiales.</p>
+        <a href="contacto.html" class="btn btn-primary-custom">Solicitar cotización</a>
+        <a href="https://api.whatsapp.com/send?phone=5219932325906" class="btn btn-outline-light ms-3" target="_blank">
+            <i class="fab fa-whatsapp me-2"></i> WhatsApp
+        </a>
     </div>
 </section>
-
-
-<div class="modal fade" id="pdfModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="pdfModalTitle"><i class="fas fa-file-pdf me-2"></i> Ficha Técnica</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-0" style="height: 80vh;">
-                <iframe id="pdfViewer" src="" style="width: 100%; height: 100%; border: none;"></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <footer>
     <div class="container">
@@ -170,12 +163,12 @@
                 <h5>Oficinas</h5>
                 <p>Periférico Carlos Pellicer Cámara No. 619, Col. Miguel Hidalgo, Villahermosa, Tabasco.</p>
                 <p><i class="fas fa-phone-alt me-2"></i> (993) 635 7956</p>
-                <p><i class="fab fa-whatsapp me-2"></i> +52 1 993 395 9392</p>
+                <p><i class="fab fa-whatsapp me-2"></i> +52 1993 395 9392 </p>
             </div>
             <div class="col-lg-3 mb-4">
                 <h5>Horario</h5>
                 <p>Lunes a Viernes: 8:00 AM - 5:30 PM</p>
-                <p>Sábados: 8:00 AM - 2:00 PM</p>
+                <p>Sábados: 8:00 AM - 2:00 PM </p>
                 <p>Domingos: Cerrado</p>
             </div>
         </div>
@@ -190,9 +183,21 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid rounded" style="max-height: 80vh;">
+                <p id="modalCaption" class="text-white mt-3 fw-bold"></p>
+                <button type="button" class="btn btn-light mt-3" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/galeria-entregas.js"></script>
 </body>
 </html>

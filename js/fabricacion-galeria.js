@@ -22,9 +22,9 @@ const galeriaFabricaciones = [
 
     {
         img: "images/galeria/4.png",
-        category: "valvulas",
-        titulo: "Manifold de válvulas industriales",
-        especificacion: "Sistema de válvulas ensambladas para control y distribución de fluidos a presión."
+        category: "conexiones",
+        titulo: "Maquinado y roscado de conexión industrial",
+        especificacion: "Roscado de precisión para sistemas de alta presión"
     },
 
     {

@@ -1,5 +1,5 @@
 const heroSlides = [
-    { image: "images/gas/alta.jpeg", title: "Especialistas en Alta Presión", subtitle: "Fluidos, Gas y Vapor", description: "Soluciones innovadoras para la industria petrolera." },
+    { image: "images/gas/alta.png", title: "Especialistas en Alta Presión", subtitle: "Fluidos, Gas y Vapor", description: "Soluciones innovadoras para la industria petrolera." },
     { image: "images/gas/4.jpeg", title: "Suministros para la Industria Petrolera", subtitle: "Calidad y Certificación", description: "Productos de acero de la más alta calidad." },
     { image: "images/fabri.jpeg", title: "Fabricación y Suministro", subtitle: "Entregas Verificadas", description: "Tuberías y válvulas con estándares internacionales." }
 ];
@@ -8,15 +8,6 @@ const services = [
     { img: "images/gas/oilgas.jpeg", title: "FLUIDOS, GAS Y VAPOR", text: "Especialistas en alta presión.", pdf: "pdf/docs/catalago.pdf" },
     { img: "images/fabri.jpeg", title: "FABRICACIONES", text: "Suministros según normas vigentes.", pdf: "pdf/docs/catalogo_fabricacion.pdf" },
     { img: "images/productos/9.jpeg", title: "PRODUCTOS", text: "Entregas extremadamente verificadas.", pdf: "pdf/docs/catalogo_producto.pdf" }
-];
-
-const galleryImages = [
-    { img: "images/entregas/gal1.jpeg", category: "fabricacion", title: "Fabricación de tubería" },
-    { img: "images/entregas/gal2.jpeg", category: "fabricacion", title: "Conexiones forjadas" },
-    { img: "images/entregas/gal3.jpeg", category: "fabricacion", title: "Sistemas de alta presión" },
-    { img: "images/entregas/gal4.jpeg", category: "entrega", title: "Entrega a campo" },
-    { img: "images/entregas/gal5.jpeg", category: "entrega", title: "Suministro verificado" },
-    { img: "images/entregas/gal6.jpeg", category: "entrega", title: "Logística especializada" }
 ];
 
 const clients = [
