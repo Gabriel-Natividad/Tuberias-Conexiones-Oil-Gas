@@ -91,7 +91,6 @@ const productos = [
         pdf: "pdf/docs/anillos.pdf"
     },
 
-    // ACCESORIOS (3 productos)
     {
         id: 13,
         nombre: "Esparragos",
