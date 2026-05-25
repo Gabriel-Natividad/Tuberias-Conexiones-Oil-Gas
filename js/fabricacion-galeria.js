@@ -105,60 +105,42 @@ const galeriaFabricaciones = [
 
     {
         img: "images/galeria/17.png",
-        category: "",
-        titulo: "",
-        especificacion: "", 
+        category: "tuberia",
+        titulo: "Fabricación de estructura metálica industrial",
+        especificacion: "Aplicaciones para soporte industrial", 
     },
 
     {
         img: "images/galeria/18.png",
-        category: "",
-        titulo: "",
-        especificacion: "",   
+        category: "tuberia",
+        titulo: "Instalación de sistema de tubería industrial",
+        especificacion: "Montaje de líneas para fluidos industriales",   
     },
 
     {
         img: "images/galeria/19.png",
-        category: "",
-        titulo: "",
-        especificacion: "",   
+        category: "conexiones",
+        title: "Maquinado de brida industrial",
+        especificacions: "Maquinado en torno y fresadora industrial",
     },
     {
-        img: "",
-        category: "",
-        titulo: "",
-        especificacion: "",   
+        img: "images/galeria/20.png",
+        category: "tuberia",
+        title: "Roscado de tubería industrial",
+        specs: "Roscado para tubería cédula 40 y 80",
     },
     {
-        img: "",
-        category: "",
-        titulo: "",
-        especificacion: "",   
+        img: "images/galeria/21.png",
+        category: "valvulas",
+        titulo: "Fabricación y mantenimiento de válvulas",
+        especificacion: "Integración de componentes bridado y roscado",
     },
     {
-        img: "",
-        category: "",
-        titulo: "",
-        especificacion: "",   
+        img: "images/galeria/22.png",
+        category: "conexiones",
+        titulo: "Rectificado de brida de acero",
+        especificacion: "Fabricación en acero inoxidable y carbón",
     },
-    {
-        img: "",
-        category: "",
-        titulo: "",
-        especificacion: "",   
-    },
-    {
-        img: "",
-        category: "",
-        titulo: "",
-        especificacion: "",   
-    },
-    {
-        img: "",
-        category: "",
-        titulo: "",
-        especificacion: "",     
-    }
 ];
 
 let currentGallery = galeriaFabricaciones;
