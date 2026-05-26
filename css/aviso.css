@@ -1,6 +1,3 @@
-/* ===== ESTILOS PARA AVISO DE PRIVACIDAD ===== */
-
-/* Header personalizado (reutiliza el de fabricacion si quieres, o creas uno específico) */
 .privacy-header {
     background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
     padding: 80px 0;
@@ -19,7 +16,6 @@
     margin: 0 auto;
 }
 
-/* Sidebar card */
 .privacy-sidebar-card {
     background: white;
     border-radius: 20px;
@@ -41,7 +37,6 @@
     margin-bottom: 25px;
 }
 
-/* Card principal del acordeón */
 .privacy-card {
     background: white;
     border-radius: 20px;
@@ -65,7 +60,7 @@
     opacity: 0.85;
 }
 
-/* Estilos del acordeón */
+
 .accordion-item {
     border: none;
     border-bottom: 1px solid #e9ecef;
