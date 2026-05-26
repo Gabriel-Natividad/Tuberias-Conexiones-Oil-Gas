@@ -1,5 +1,4 @@
 const productos = [
-    // TUBERÍA (4 productos)
     {
         id: 1,
         nombre: "Tubería de Acero al Carbón Sin Costura",
@@ -33,7 +32,6 @@ const productos = [
         pdf: "pdf/docs/ficha3.pdf"
     },
 
-    // CONEXIONES (5 productos)
     {
         id: 5,
         nombre: "Conexiones Soldables de Acero Inoxidables.",
