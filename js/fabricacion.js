@@ -1,4 +1,3 @@
-// ======================== PROCESO DE FABRICACIÓN (6 PASOS) ========================
 const procesoPasos = [
     { numero: "01", titulo: "Ingeniería y Diseño", descripcion: "Desarrollamos planos y especificaciones técnicas según requerimientos del cliente." },
     { numero: "02", titulo: "Selección de Materiales", descripcion: "Materia prima certificada con trazabilidad y calidad asegurada." },
@@ -13,7 +12,6 @@ const procesoPasos = [
     }
 ];
 
-// ======================== SERVICIOS ESPECIALIZADOS (DESDE LA IMAGEN) ========================
 const serviciosEspecializados = [
     { 
         icono: "fas fa-industry", 
@@ -77,7 +75,6 @@ const serviciosEspecializados = [
     }
 ];
 
-// ======================== PROYECTOS REALES (GALERÍA DE FABRICACIONES) ========================
 const proyectosReales = [
     {
         img: "images/proyectos/manifold-6-vias.jpg",  
@@ -123,12 +120,8 @@ const proyectosReales = [
     }
 ];
 
-// Ruta del PDF
 const pdfUrl = "pdf/docs/catalogo_fabricacion.pdf";
 
-// ======================== FUNCIONES DE RENDERIZADO ========================
-
-// Renderizar los 6 pasos del proceso
 function renderProceso() {
     const container = document.getElementById('processContainer');
     if (container) {
@@ -146,7 +139,6 @@ function renderProceso() {
     }
 }
 
-// Renderizar la galería de proyectos (fabricaciones)
 function renderProyectos() {
     const container = document.getElementById('galleryFabricacion');
     if (!container) return;
@@ -172,7 +164,6 @@ function renderProyectos() {
     `).join('');
 }
 
-// Renderizar los servicios especializados en el modal
 function renderServiciosModal() {
     const container = document.getElementById('serviciosListContainer');
     if (!container) return;
@@ -192,14 +183,9 @@ function renderServiciosModal() {
     `).join('');
 }
 
-// ======================== MODALES ========================
-
-// Abrir modal con todos los servicios especializados
 window.abrirModalServicios = () => {
-    // Verificar si el modal ya existe
     let modal = document.getElementById('serviciosModal');
     if (!modal) {
-        // Crear el modal dinámicamente
         modal = document.createElement('div');
         modal.id = 'serviciosModal';
         modal.className = 'modal fade';
@@ -229,21 +215,20 @@ window.abrirModalServicios = () => {
         document.body.appendChild(modal);
     }
     
-    // Renderizar los servicios dentro del modal
+
     renderServiciosModal();
     
-    // Mostrar el modal
+
     const bsModal = new bootstrap.Modal(modal);
     bsModal.show();
 };
 
-// Abrir modal de equipos (maquinaria)
+
 window.abrirModalEquipos = () => {
     const modal = new bootstrap.Modal(document.getElementById('equiposModal'));
     if (modal) modal.show();
 };
 
-// Abrir modal con detalles de proyecto
 window.openModalProyecto = (titulo, descripcion, detalles, imgSrc) => {
     let modal = document.getElementById('proyectoModalDetail');
     if (!modal) {
@@ -289,7 +274,6 @@ window.openModalProyecto = (titulo, descripcion, detalles, imgSrc) => {
     bsModal.show();
 };
 
-// Abrir visor de PDF
 function openPdfViewer() {
     if (pdfUrl) {
         window.open(pdfUrl, '_blank');
@@ -298,7 +282,6 @@ function openPdfViewer() {
     }
 }
 
-// ======================== INICIALIZACIÓN ========================
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({ duration: 800, once: true });
     
@@ -312,7 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (openBtn2) openBtn2.addEventListener('click', openPdfViewer);
 });
 
-// Navbar scroll effect
 window.addEventListener('scroll', function() {
     const nav = document.getElementById('mainNav');
     if (nav) {

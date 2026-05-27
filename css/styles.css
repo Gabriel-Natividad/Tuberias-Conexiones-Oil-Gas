@@ -409,7 +409,6 @@ footer a:hover {
     .secondary-logo { height: 45px; }
 }
 
-/* Ajustes responsivos para el menú centrado */
 @media (max-width: 991px) {
     .navbar-collapse .d-flex {
         flex-direction: column;
