@@ -126,8 +126,8 @@ const galeriaFabricaciones = [
     {
         img: "images/galeria/20.png",
         category: "tuberia",
-        title: "Roscado de tubería industrial",
-        specs: "Roscado para tubería cédula 40 y 80",
+        titulo: "Roscado de tubería industrial",
+        especificacion: "Roscado para tubería cédula 40 y 80",
     },
     {
         img: "images/galeria/21.png",
@@ -141,6 +141,59 @@ const galeriaFabricaciones = [
         titulo: "Rectificado de brida de acero",
         especificacion: "Fabricación en acero inoxidable y carbón",
     },
+    {
+        img: "images/galeria/23.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",
+    },
+    {
+        img: "images/galeria/24.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",
+    },
+    {
+        img: "images/galeria/25.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",
+    },
+    {
+        img: "images/galeria/26.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",  
+    },
+    {
+        img: "images/galeria/27.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",
+    },
+    {
+        img: "images/galeria/28.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",  
+    },
+    {
+        img: "images/galeria/29.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",
+    },
+    {
+        img: "images/galeria/30.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",      
+    },
+    {
+        img: "images/galeria/8.png",
+        category: "tuberia",
+        titulo:"",
+        especificacion:"",}
 ];
 
 let currentGallery = galeriaFabricaciones;
